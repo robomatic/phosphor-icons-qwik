@@ -1,12 +1,19 @@
 import { resolve } from "path";
+import { qwikVite } from "@builder.io/qwik/optimizer";
 import { defineConfig } from "vitest/config";
-import react from "@vitejs/plugin-react";
 import pkg from "./package.json";
 
 export default defineConfig({
-  plugins: [react({ jsxRuntime: "classic" })],
+  plugins: [
+    qwikVite({
+      client: {
+        outDir: "dist/",
+      },
+    }),
+  ],
   build: {
-    target: "ES2017",
+    target: "es2020",
+    outDir: './dist/',
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "PhosphorReact",
@@ -14,15 +21,11 @@ export default defineConfig({
       fileName: (format, name) => `${name}.${format}.js`,
     },
     rollupOptions: {
-      external: Object.keys(pkg.peerDependencies),
+      // external: Object.keys(pkg.peerDependencies),
       input: "./src/index.ts",
       output: {
         preserveModules: true,
         preserveModulesRoot: "src",
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-        },
       },
     },
   },

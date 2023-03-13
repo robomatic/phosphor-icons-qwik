@@ -125,22 +125,28 @@ function generateComponents() {
 
     let componentString = `\
 /* GENERATED FILE */
-import { forwardRef, ReactElement } from "react";
-import { IconWeight, Icon, IconBase } from "../lib";
+    
+import { IconBase } from "../lib";
+import type { Icon } from "../lib";
+import { $ } from '@builder.io/qwik';
 
-const weights = new Map<IconWeight, ReactElement>([
 ${Object.entries(icon)
-  .map(([weight, path]) => `["${weight}", <>${path.trim()}</>]`)
-  .join(",")}
-]);
+  .map(([weight, path]) => `export const ${
+    weight.charAt(0).toUpperCase()}${weight.slice(1)
+  } = $(() => <>${path.trim()}</>)`)
+  .join("\n")}
+
+const weights = {
+${Object.entries(icon)
+  .map(([weight, path]) => `  ${weight}: ${weight.charAt(0).toUpperCase()}${weight.slice(1)}`)
+  .join(",\n")}
+}
 `;
 
     componentString += `
-const ${name}: Icon = forwardRef((props, ref) => (
-  <IconBase ref={ref} {...props} weights={weights} />
-));
-
-${name}.displayName = "${name}";
+const ${name}: Icon = (props) => (
+  <IconBase {...props} weights={weights} />
+);
 
 export default ${name};
 `;

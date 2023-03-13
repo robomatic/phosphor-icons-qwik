@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef } from "react";
+import { FunctionComponent } from "@builder.io/qwik/jsx-runtime";
 
 export type IconWeight =
   | "thin"
@@ -8,7 +8,7 @@ export type IconWeight =
   | "fill"
   | "duotone";
 
-export interface IconProps extends ComponentPropsWithRef<"svg"> {
+export interface IconProps extends Record<string, any> {
   alt?: string;
   color?: string;
   size?: string | number;
@@ -16,4 +16,4 @@ export interface IconProps extends ComponentPropsWithRef<"svg"> {
   mirrored?: boolean;
 }
 
-export type Icon = React.ForwardRefExoticComponent<IconProps>;
+export type Icon = FunctionComponent<Record<string, any>>;

@@ -1,6 +1,6 @@
 /* GENERATED FILE */
 export type { Icon, IconProps, IconWeight } from "./lib";
-export { IconContext, IconBase } from "./lib";
+export { IconContext, IconContextProvider, IconBase } from "./lib";
 
 export { default as AddressBook } from "./icons/AddressBook";
 export { default as AirTrafficControl } from "./icons/AirTrafficControl";
@@ -493,10 +493,7 @@ export { default as FileCloud } from "./icons/FileCloud";
 export { default as FileCode } from "./icons/FileCode";
 export { default as FileCss } from "./icons/FileCss";
 export { default as FileCsv } from "./icons/FileCsv";
-export {
-  default as FileDashed,
-  default as FileDotted,
-} from "./icons/FileDashed";
+export { default as FileDashed, default as FileDotted } from "./icons/FileDashed";
 export { default as FileDoc } from "./icons/FileDoc";
 export { default as FileHtml } from "./icons/FileHtml";
 export { default as FileImage } from "./icons/FileImage";
@@ -504,10 +501,7 @@ export { default as FileJpg } from "./icons/FileJpg";
 export { default as FileJs } from "./icons/FileJs";
 export { default as FileJsx } from "./icons/FileJsx";
 export { default as FileLock } from "./icons/FileLock";
-export {
-  default as FileMagnifyingGlass,
-  default as FileSearch,
-} from "./icons/FileMagnifyingGlass";
+export { default as FileMagnifyingGlass, default as FileSearch } from "./icons/FileMagnifyingGlass";
 export { default as FileMinus } from "./icons/FileMinus";
 export { default as FilePdf } from "./icons/FilePdf";
 export { default as FilePlus } from "./icons/FilePlus";
@@ -554,10 +548,7 @@ export { default as FlowerLotus } from "./icons/FlowerLotus";
 export { default as FlowerTulip } from "./icons/FlowerTulip";
 export { default as FlyingSaucer } from "./icons/FlyingSaucer";
 export { default as Folder } from "./icons/Folder";
-export {
-  default as FolderDashed,
-  default as FolderDotted,
-} from "./icons/FolderDashed";
+export { default as FolderDashed, default as FolderDotted } from "./icons/FolderDashed";
 export { default as FolderLock } from "./icons/FolderLock";
 export { default as FolderMinus } from "./icons/FolderMinus";
 export { default as FolderNotch } from "./icons/FolderNotch";
@@ -567,10 +558,7 @@ export { default as FolderNotchPlus } from "./icons/FolderNotchPlus";
 export { default as FolderOpen } from "./icons/FolderOpen";
 export { default as FolderPlus } from "./icons/FolderPlus";
 export { default as FolderSimple } from "./icons/FolderSimple";
-export {
-  default as FolderSimpleDashed,
-  default as FolderSimpleDotted,
-} from "./icons/FolderSimpleDashed";
+export { default as FolderSimpleDashed, default as FolderSimpleDotted } from "./icons/FolderSimpleDashed";
 export { default as FolderSimpleLock } from "./icons/FolderSimpleLock";
 export { default as FolderSimpleMinus } from "./icons/FolderSimpleMinus";
 export { default as FolderSimplePlus } from "./icons/FolderSimplePlus";
@@ -978,18 +966,9 @@ export { default as Screencast } from "./icons/Screencast";
 export { default as ScribbleLoop } from "./icons/ScribbleLoop";
 export { default as Scroll } from "./icons/Scroll";
 export { default as Seal, default as CircleWavy } from "./icons/Seal";
-export {
-  default as SealCheck,
-  default as CircleWavyCheck,
-} from "./icons/SealCheck";
-export {
-  default as SealQuestion,
-  default as CircleWavyQuestion,
-} from "./icons/SealQuestion";
-export {
-  default as SealWarning,
-  default as CircleWavyWarning,
-} from "./icons/SealWarning";
+export { default as SealCheck, default as CircleWavyCheck } from "./icons/SealCheck";
+export { default as SealQuestion, default as CircleWavyQuestion } from "./icons/SealQuestion";
+export { default as SealWarning, default as CircleWavyWarning } from "./icons/SealWarning";
 export { default as SelectionAll } from "./icons/SelectionAll";
 export { default as SelectionBackground } from "./icons/SelectionBackground";
 export { default as Selection } from "./icons/Selection";

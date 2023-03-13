@@ -1,52 +1,53 @@
-"use client";
-
-import { forwardRef, useContext, ReactElement } from "react";
-import { IconContext } from "./context";
-import { IconProps, IconWeight } from "./types";
+import { IconContext } from './context'
+import type { IconProps } from './types'
+import {
+  component$,
+  type JSXChildren,
+  useContext,
+  Slot,
+  useTask$,
+  useStore,
+} from '@builder.io/qwik'
 
 interface IconBaseProps extends IconProps {
-  weights: Map<IconWeight, ReactElement>;
+  weights: { [index: string]: JSXChildren }
 }
 
-const IconBase = forwardRef<SVGSVGElement, IconBaseProps>((props, ref) => {
-  const {
-    alt,
-    color,
-    size,
-    weight,
-    mirrored,
-    children,
-    weights,
-    ...restProps
-  } = props;
+const IconBase = component$((props: IconBaseProps) => {
+  const { alt, color, size, weight, mirrored, weights, ...restProps } = props
 
   const {
-    color: contextColor = "currentColor",
+    color: contextColor = 'currentColor',
     size: contextSize,
-    weight: contextWeight = "regular",
+    weight: contextWeight = 'regular',
     mirrored: contextMirrored = false,
     ...restContext
-  } = useContext(IconContext);
+  } = useContext<IconProps>(IconContext) ?? {}
+
+  const store = useStore<{ weight: any }>({ weight: undefined })
+
+  useTask$(async ({ track }) => {
+    track(() => weight)
+    const theWeight = weight ?? contextWeight
+    store.weight = weights[theWeight]
+  })
 
   return (
     <svg
-      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size ?? contextSize}
       height={size ?? contextSize}
       fill={color ?? contextColor}
       viewBox="0 0 256 256"
-      transform={mirrored || contextMirrored ? "scale(-1, 1)" : undefined}
+      transform={mirrored || contextMirrored ? 'scale(-1, 1)' : undefined}
       {...restContext}
       {...restProps}
     >
       {!!alt && <title>{alt}</title>}
-      {children}
-      {weights.get(weight ?? contextWeight)}
+      <Slot />
+      <store.weight />
     </svg>
-  );
-});
+  )
+})
 
-IconBase.displayName = "IconBase";
-
-export default IconBase;
+export default IconBase
