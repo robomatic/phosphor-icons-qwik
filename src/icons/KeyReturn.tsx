@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M71.51,144.49a12,12,0,0,1,0-17l24-24a12,12,0,0,1,17,17L109,124h55V104a12,12,0,0,1,24,0v32a12,12,0,0,1-12,12H109l3.52,3.51a12,12,0,0,1-17,17ZM236,56V200a20,20,0,0,1-20,20H40a20,20,0,0,1-20-20V56A20,20,0,0,1,40,36H216A20,20,0,0,1,236,56Zm-24,4H44V196H212Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const KeyReturn: Icon = (props) => (
+const KeyReturn: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+KeyReturn.displayName = "KeyReturn";
 
 export default KeyReturn;

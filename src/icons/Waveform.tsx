@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M60,96v64a12,12,0,0,1-24,0V96a12,12,0,0,1,24,0ZM88,20A12,12,0,0,0,76,32V224a12,12,0,0,0,24,0V32A12,12,0,0,0,88,20Zm40,32a12,12,0,0,0-12,12V192a12,12,0,0,0,24,0V64A12,12,0,0,0,128,52Zm40,32a12,12,0,0,0-12,12v64a12,12,0,0,0,24,0V96A12,12,0,0,0,168,84Zm40-16a12,12,0,0,0-12,12v96a12,12,0,0,0,24,0V80A12,12,0,0,0,208,68Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const Waveform: Icon = (props) => (
+const Waveform: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+Waveform.displayName = "Waveform";
 
 export default Waveform;

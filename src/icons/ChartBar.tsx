@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M224,196h-4V40a12,12,0,0,0-12-12H152a12,12,0,0,0-12,12V76H96A12,12,0,0,0,84,88v36H48a12,12,0,0,0-12,12v60H32a12,12,0,0,0,0,24H224a12,12,0,0,0,0-24ZM164,52h32V196H164Zm-56,48h32v96H108ZM60,148H84v48H60Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const ChartBar: Icon = (props) => (
+const ChartBar: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+ChartBar.displayName = "ChartBar";
 
 export default ChartBar;

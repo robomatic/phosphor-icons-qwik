@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M241.73,135l-52,72a12,12,0,0,1-19.46,0L76,76.5,33.73,135A12,12,0,1,1,14.27,121l52-72a12,12,0,0,1,19.46,0L180,179.5,222.27,121A12,12,0,1,1,241.73,135Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const WaveTriangle: Icon = (props) => (
+const WaveTriangle: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+WaveTriangle.displayName = "WaveTriangle";
 
 export default WaveTriangle;

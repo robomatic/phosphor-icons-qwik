@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M244,116H186.79a60,60,0,0,0-117.58,0H12a12,12,0,0,0,0,24H69.21a60,60,0,0,0,117.58,0H244a12,12,0,0,0,0-24ZM128,164a36,36,0,1,1,36-36A36,36,0,0,1,128,164Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const GitCommit: Icon = (props) => (
+const GitCommit: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+GitCommit.displayName = "GitCommit";
 
 export default GitCommit;

@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M216.49,191.51a12,12,0,0,1-17,17L184,193l-15.51,15.52a12,12,0,0,1-17-17L167,176l-15.52-15.51a12,12,0,0,1,17-17L184,159l15.51-15.52a12,12,0,0,1,17,17L201,176ZM160,124a12,12,0,0,0,12-12V72a12,12,0,0,0-24,0v40A12,12,0,0,0,160,124Zm40,0a12,12,0,0,0,12-12V32a12,12,0,0,0-24,0v80A12,12,0,0,0,200,124Zm-80-24a12,12,0,0,0-12,12v88a12,12,0,0,0,24,0V112A12,12,0,0,0,120,100ZM80,140a12,12,0,0,0-12,12v48a12,12,0,0,0,24,0V152A12,12,0,0,0,80,140ZM40,180a12,12,0,0,0-12,12v8a12,12,0,0,0,24,0v-8A12,12,0,0,0,40,180Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const CellSignalX: Icon = (props) => (
+const CellSignalX: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+CellSignalX.displayName = "CellSignalX";
 
 export default CellSignalX;

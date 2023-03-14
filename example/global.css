@@ -35,3 +35,24 @@ code {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.fade-anim {
+  animation: fade 4s infinite;
+    /*values="0;1;0"
+    dur="4s"
+    repeatCount="indefinite"*/
+  }
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.rotate-anim {
+  animation: rotator 5s steps(8, end) infinite;
+}
+
+@keyframes rotator {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

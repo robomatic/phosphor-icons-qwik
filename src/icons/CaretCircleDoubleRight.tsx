@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M204.4,51.6a108,108,0,1,0,0,152.8A108.16,108.16,0,0,0,204.4,51.6Zm-17,135.82a84,84,0,1,1,0-118.84A84.12,84.12,0,0,1,187.42,187.42Zm-58.93-67.91a12,12,0,0,1,0,17l-32,32a12,12,0,0,1-17-17L103,128,79.49,104.47a12,12,0,1,1,17-17Zm56,17-32,32a12,12,0,0,1-17-17L159,128l-23.52-23.53a12,12,0,1,1,17-17l32,32A12,12,0,0,1,184.51,136.49Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const CaretCircleDoubleRight: Icon = (props) => (
+const CaretCircleDoubleRight: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+CaretCircleDoubleRight.displayName = "CaretCircleDoubleRight";
 
 export default CaretCircleDoubleRight;

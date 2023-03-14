@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M212,96V32a12,12,0,0,0-12-12H56a12,12,0,0,0-8,21L96.44,84H56A12,12,0,0,0,44,96v64a12,12,0,0,0,3.52,8.49l72,72A12,12,0,0,0,140,232V172h60a12,12,0,0,0,8-21l-48.41-43H200A12,12,0,0,0,212,96Zm-43.56,52H128a12,12,0,0,0-12,12v43L68,155V108h55.44ZM188,84H132.56l-45-40H188Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const FramerLogo: Icon = (props) => (
+const FramerLogo: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+FramerLogo.displayName = "FramerLogo";
 
 export default FramerLogo;

@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M191.2,166.4,140,128l51.2-38.4a12,12,0,0,0,0-19.2l-64-48A12,12,0,0,0,108,32v72L63.2,70.4A12,12,0,0,0,48.8,89.6L100,128,48.8,166.4a12,12,0,1,0,14.4,19.2L108,152v72a12,12,0,0,0,19.2,9.6l64-48a12,12,0,0,0,0-19.2ZM132,56l32,24-32,24Zm0,144V152l32,24ZM48,144a16,16,0,1,1,16-16A16,16,0,0,1,48,144Zm168-16a16,16,0,1,1-16-16A16,16,0,0,1,216,128Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const BluetoothConnected: Icon = (props) => (
+const BluetoothConnected: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+BluetoothConnected.displayName = "BluetoothConnected";
 
 export default BluetoothConnected;

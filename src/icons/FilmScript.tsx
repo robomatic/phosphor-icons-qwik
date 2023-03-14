@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M200,20H56A20,20,0,0,0,36,40V216a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V40A20,20,0,0,0,200,20Zm-4,192H60V44H196ZM76,80A16,16,0,1,1,92,96,16,16,0,0,1,76,80Zm0,96a16,16,0,1,1,16,16A16,16,0,0,1,76,176Zm0-48a16,16,0,1,1,16,16A16,16,0,0,1,76,128Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const FilmScript: Icon = (props) => (
+const FilmScript: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+FilmScript.displayName = "FilmScript";
 
 export default FilmScript;

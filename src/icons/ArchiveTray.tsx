@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M208,28H48A20,20,0,0,0,28,48V208a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V48A20,20,0,0,0,208,28Zm-4,24v96H179.31a19.86,19.86,0,0,0-14.14,5.86L147,172H109L90.83,153.86A19.86,19.86,0,0,0,76.69,148H52V52ZM52,204V172H75l18.14,18.14A19.86,19.86,0,0,0,107.31,196h41.38a19.86,19.86,0,0,0,14.14-5.86L181,172h23v32Zm35.51-79.51a12,12,0,0,1,17-17L116,119V76a12,12,0,0,1,24,0v43l11.51-11.52a12,12,0,0,1,17,17l-32,32a12,12,0,0,1-17,0Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const ArchiveTray: Icon = (props) => (
+const ArchiveTray: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+ArchiveTray.displayName = "ArchiveTray";
 
 export default ArchiveTray;

@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M228,56V114.8a138.72,138.72,0,0,1-7.77,46.8,12,12,0,1,1-22.6-8.08A114.62,114.62,0,0,0,204,114.8V60H109.33a12,12,0,1,1,0-24H208A20,20,0,0,1,228,56ZM216.88,207.93a12,12,0,1,1-17.76,16.15l-11.74-12.92A151.78,151.78,0,0,1,134.24,243a19.63,19.63,0,0,1-12.49,0C106.1,237.78,28,207.16,28,114.8V56a20,20,0,0,1,8-16,12,12,0,0,1,20.87-8.1Zm-45.64-14.52L52,62.24V114.8c0,73.56,60.53,99.53,76,105A126.88,126.88,0,0,0,171.24,193.41Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const ShieldSlash: Icon = (props) => (
+const ShieldSlash: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+ShieldSlash.displayName = "ShieldSlash";
 
 export default ShieldSlash;

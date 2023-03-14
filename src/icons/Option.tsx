@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M236,184a12,12,0,0,1-12,12H160.94a19.89,19.89,0,0,1-17.88-11.06L92.58,84H32a12,12,0,0,1,0-24H95.06a19.89,19.89,0,0,1,17.88,11.06L163.42,172H224A12,12,0,0,1,236,184ZM152,84h72a12,12,0,0,0,0-24H152a12,12,0,0,0,0,24Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const Option: Icon = (props) => (
+const Option: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+Option.displayName = "Option";
 
 export default Option;

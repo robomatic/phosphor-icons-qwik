@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M228.61,60.92l-96-40a12,12,0,0,0-9.24,0l-96,40a12,12,0,0,0-7.28,12.67l16,120a12,12,0,0,0,6.52,9.14l80,40a12,12,0,0,0,10.74,0l80-40a12,12,0,0,0,6.52-9.14l16-120A12,12,0,0,0,228.61,60.92ZM197,184.11,128,218.58,59.05,184.11,45.11,79.54,128,45l82.89,34.54ZM117.51,82.17l-40,72a12,12,0,1,0,21,11.66L106.17,152h43.66l7.68,13.83a12,12,0,1,0,21-11.66l-40-72a12,12,0,0,0-21,0Zm2,45.83L128,112.71,136.49,128Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const AngularLogo: Icon = (props) => (
+const AngularLogo: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+AngularLogo.displayName = "AngularLogo";
 
 export default AngularLogo;

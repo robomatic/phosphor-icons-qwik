@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M197.35,43.62l11.14-11.13a12,12,0,0,0-17-17L179.34,27.69a91.84,91.84,0,0,0-102.68,0L64.49,15.51a12,12,0,0,0-17,17L58.65,43.62A91.58,91.58,0,0,0,36,104v40a92,92,0,0,0,184,0V104A91.58,91.58,0,0,0,197.35,43.62ZM196,104v4H60v-4a68,68,0,0,1,136,0ZM128,212a68.07,68.07,0,0,1-68-68V132H196v12A68.07,68.07,0,0,1,128,212ZM140,80a16,16,0,1,1,16,16A16,16,0,0,1,140,80ZM84,80a16,16,0,1,1,16,16A16,16,0,0,1,84,80Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const BugDroid: Icon = (props) => (
+const BugDroid: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+BugDroid.displayName = "BugDroid";
 
 export default BugDroid;

@@ -1,19 +1,15 @@
 import { resolve } from "path";
 import { qwikVite } from "@builder.io/qwik/optimizer";
 import { defineConfig } from "vitest/config";
-import pkg from "./package.json";
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  plugins: [
-    qwikVite({
-      client: {
-        outDir: "dist/",
-      },
-    }),
-  ],
+  plugins: [qwikVite({
+    srcDir: './example'
+  }), tsconfigPaths()],
   build: {
     target: "es2020",
-    outDir: './dist/',
+    outDir: "./dist/",
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "PhosphorReact",
@@ -21,7 +17,6 @@ export default defineConfig({
       fileName: (format, name) => `${name}.${format}.js`,
     },
     rollupOptions: {
-      // external: Object.keys(pkg.peerDependencies),
       input: "./src/index.ts",
       output: {
         preserveModules: true,

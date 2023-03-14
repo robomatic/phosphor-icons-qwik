@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M112,60a16,16,0,1,1,16,16A16,16,0,0,1,112,60Zm16,52a16,16,0,1,0,16,16A16,16,0,0,0,128,112Zm0,68a16,16,0,1,0,16,16A16,16,0,0,0,128,180Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const DotsThreeVertical: Icon = (props) => (
+const DotsThreeVertical: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+DotsThreeVertical.displayName = "DotsThreeVertical";
 
 export default DotsThreeVertical;

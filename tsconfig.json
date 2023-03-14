@@ -5,14 +5,13 @@
     "module": "ESNext",
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "rootDir": "./src",
     "outDir": "./dist",
     "baseUrl": "./",
     "paths": {
       "*": ["src/*"]
     },
     "jsxImportSource": "@builder.io/qwik",
-    "types": ["vite/client"],
+    "types": ["node", "vite/client"],
     "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true,
     "declaration": true,
@@ -31,5 +30,5 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true
-  }
+  },
 }

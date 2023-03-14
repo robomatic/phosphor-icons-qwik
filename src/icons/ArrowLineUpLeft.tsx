@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M228,216a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,216ZM64,164a12,12,0,0,0,12-12V85l91.51,91.52a12,12,0,0,0,17-17L93,68h67a12,12,0,0,0,0-24H64A12,12,0,0,0,52,56v96A12,12,0,0,0,64,164Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const ArrowLineUpLeft: Icon = (props) => (
+const ArrowLineUpLeft: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+ArrowLineUpLeft.displayName = "ArrowLineUpLeft";
 
 export default ArrowLineUpLeft;

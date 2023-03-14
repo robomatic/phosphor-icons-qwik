@@ -1,4 +1,4 @@
-import { FunctionComponent } from "@builder.io/qwik/jsx-runtime";
+import { FunctionComponent, JSXNode, QwikIntrinsicElements } from "@builder.io/qwik";
 
 export type IconWeight =
   | "thin"
@@ -16,4 +16,4 @@ export interface IconProps extends Record<string, any> {
   mirrored?: boolean;
 }
 
-export type Icon = FunctionComponent<Record<string, any>>;
+export type Icon<PROPS> = (props: PROPS) => JSXNode<string | FunctionComponent<Record<string, any>>> | null;

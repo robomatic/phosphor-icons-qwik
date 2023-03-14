@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M228,160V96a12,12,0,0,0-12-12H172V40a12,12,0,0,0-12-12H40A12,12,0,0,0,28,40V96h0v64a12,12,0,0,0,12,12H84v44a12,12,0,0,0,12,12H216a12,12,0,0,0,12-12V160Zm-63,44L52,91V69L187,204ZM69,52H91L204,165V187Zm135,79-23-23h23ZM148,75,125,52h23ZM52,125l23,23H52Zm56,56,23,23H108Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const UniteSquare: Icon = (props) => (
+const UniteSquare: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+UniteSquare.displayName = "UniteSquare";
 
 export default UniteSquare;

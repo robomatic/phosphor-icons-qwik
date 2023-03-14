@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M240,92h-6.3l-8.61-40.19A20.11,20.11,0,0,0,205.53,36H50.47A20.11,20.11,0,0,0,30.91,51.81L22.3,92H16a12,12,0,0,0,0,24h4v92a20,20,0,0,0,20,20H64a20,20,0,0,0,20-20V188h88v20a20,20,0,0,0,20,20h24a20,20,0,0,0,20-20V116h4a12,12,0,0,0,0-24ZM53.7,60H202.3l6.86,32H46.84ZM60,204H44V188H60Zm136,0V188h16v16Zm16-40H180V140a12,12,0,0,0-24,0v24H140V140a12,12,0,0,0-24,0v24H100V140a12,12,0,0,0-24,0v24H44V116H212Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const Jeep: Icon = (props) => (
+const Jeep: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+Jeep.displayName = "Jeep";
 
 export default Jeep;

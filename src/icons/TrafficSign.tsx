@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M246,113.46,142.54,10a20.57,20.57,0,0,0-29.08,0L10,113.46a20.57,20.57,0,0,0,0,29.08L113.46,246h0a20.57,20.57,0,0,0,29.08,0L246,142.54a20.57,20.57,0,0,0,0-29.08ZM128,226.57,29.43,128,128,29.43,226.57,128Zm7.51-122.08a12,12,0,0,1,17-17l24,24a12,12,0,0,1,0,17l-24,24a12,12,0,0,1-17-17L139,132H112a12,12,0,0,0-12,12v4a12,12,0,0,1-24,0v-4a36,36,0,0,1,36-36h27Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const TrafficSign: Icon = (props) => (
+const TrafficSign: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+TrafficSign.displayName = "TrafficSign";
 
 export default TrafficSign;

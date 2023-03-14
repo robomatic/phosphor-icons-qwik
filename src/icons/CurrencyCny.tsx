@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M52,64A12,12,0,0,1,64,52H192a12,12,0,0,1,0,24H64A12,12,0,0,1,52,64ZM216,164a12,12,0,0,0-12,12v12H176a12,12,0,0,1-12-12V132h44a12,12,0,0,0,0-24H48a12,12,0,0,0,0,24H92v4a52.06,52.06,0,0,1-52,52,12,12,0,0,0,0,24,76.08,76.08,0,0,0,76-76v-4h24v44a36,36,0,0,0,36,36h40a12,12,0,0,0,12-12V176A12,12,0,0,0,216,164Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const CurrencyCny: Icon = (props) => (
+const CurrencyCny: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+CurrencyCny.displayName = "CurrencyCny";
 
 export default CurrencyCny;

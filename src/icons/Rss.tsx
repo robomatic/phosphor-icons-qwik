@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M101.74,154.26A75.53,75.53,0,0,1,124,208a12,12,0,0,1-24,0,52,52,0,0,0-52-52,12,12,0,0,1,0-24A75.51,75.51,0,0,1,101.74,154.26ZM48,84a12,12,0,0,0,0,24A100,100,0,0,1,148,208a12,12,0,0,0,24,0A124,124,0,0,0,48,84Zm121.62,2.38A170.85,170.85,0,0,0,48,36a12,12,0,0,0,0,24,147,147,0,0,1,104.65,43.35A147,147,0,0,1,196,208a12,12,0,0,0,24,0A170.85,170.85,0,0,0,169.62,86.38ZM52,188a16,16,0,1,0,16,16A16,16,0,0,0,52,188Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const Rss: Icon = (props) => (
+const Rss: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+Rss.displayName = "Rss";
 
 export default Rss;

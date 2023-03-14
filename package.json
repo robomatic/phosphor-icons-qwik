@@ -36,9 +36,8 @@
     "UX"
   ],
   "scripts": {
-    "serve": "vite serve ./example",
-    "build": "vite build && tsc --emitDeclarationOnly",
-    "build.lib": "vite build --mode lib && tsc --emitDeclarationOnly",
+    "serve": "vite --open",
+    "build": "vite build --mode lib && tsc --emitDeclarationOnly",
     "test": "vitest",
     "collate": "node bin/collate.js",
     "assemble": "node bin/assemble.js",
@@ -52,6 +51,7 @@
     "prettier": "^2.8.3",
     "typescript": "^4.9.4",
     "vite": "^4.1.2",
+    "vite-tsconfig-paths": "^4.0.7",
     "vitest": "^0.28.5"
   },
   "resolutions": {

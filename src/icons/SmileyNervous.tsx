@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M184.49,176.49a12,12,0,0,1-17,0L160,169l-7.51,7.52a12,12,0,0,1-17,0L128,169l-7.51,7.52a12,12,0,0,1-17,0L96,169l-7.51,7.52a12,12,0,0,1-17-17l16-16a12,12,0,0,1,17,0L112,151l7.51-7.52a12,12,0,0,1,17,0L144,151l7.51-7.52a12,12,0,0,1,17,0l16,16A12,12,0,0,1,184.49,176.49ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128ZM92,124a16,16,0,1,0-16-16A16,16,0,0,0,92,124Zm72,0a16,16,0,1,0-16-16A16,16,0,0,0,164,124Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const SmileyNervous: Icon = (props) => (
+const SmileyNervous: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+SmileyNervous.displayName = "SmileyNervous";
 
 export default SmileyNervous;

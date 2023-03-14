@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M28,128a36,36,0,0,0,36,36h40a12,12,0,0,1,0,24H64A60,60,0,0,1,64,68h40a12,12,0,0,1,0,24H64A36,36,0,0,0,28,128ZM192,68H152a12,12,0,0,0,0,24h40a36,36,0,0,1,0,72H152a12,12,0,0,0,0,24h40a60,60,0,0,0,0-120Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const LinkSimpleHorizontalBreak: Icon = (props) => (
+const LinkSimpleHorizontalBreak: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+LinkSimpleHorizontalBreak.displayName = "LinkSimpleHorizontalBreak";
 
 export default LinkSimpleHorizontalBreak;

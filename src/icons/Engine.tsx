@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M244,112a12,12,0,0,0-12,12v16H216v-8a20,20,0,0,0-20-20H185L150.83,77.86A19.86,19.86,0,0,0,136.69,72H124V56h16a12,12,0,0,0,0-24H84a12,12,0,0,0,0,24h16V72H60A20,20,0,0,0,40,92v48H24V124a12,12,0,0,0-24,0v56a12,12,0,0,0,24,0V164H40v12.69a19.86,19.86,0,0,0,5.86,14.14l35.31,35.31A19.86,19.86,0,0,0,95.31,232h41.38a19.86,19.86,0,0,0,14.14-5.86L185,192h11a20,20,0,0,0,20-20v-8h16v16a12,12,0,0,0,24,0V124A12,12,0,0,0,244,112Zm-52,56h-8.69a19.86,19.86,0,0,0-14.14,5.86L135,208H97L64,175V96h71l34.14,34.14A19.86,19.86,0,0,0,183.31,136H192Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const Engine: Icon = (props) => (
+const Engine: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+Engine.displayName = "Engine";
 
 export default Engine;

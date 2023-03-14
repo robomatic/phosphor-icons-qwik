@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M144,204a16,16,0,1,1-16-16A16,16,0,0,1,144,204Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const WifiNone: Icon = (props) => (
+const WifiNone: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+WifiNone.displayName = "WifiNone";
 
 export default WifiNone;

@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M157.27,21.22a12,12,0,0,0-12.64,1.31L75.88,76H32A20,20,0,0,0,12,96v64a20,20,0,0,0,20,20H75.88l68.75,53.47A12,12,0,0,0,164,224V32A12,12,0,0,0,157.27,21.22ZM140,199.46,87.37,158.53A12,12,0,0,0,80,156H36V100H80a12,12,0,0,0,7.37-2.53L140,56.54ZM204,104v48a12,12,0,0,1-24,0V104a12,12,0,0,1,24,0Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const SpeakerSimpleLow: Icon = (props) => (
+const SpeakerSimpleLow: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+SpeakerSimpleLow.displayName = "SpeakerSimpleLow";
 
 export default SpeakerSimpleLow;

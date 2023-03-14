@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M216,36H40A20,20,0,0,0,20,56V184a20,20,0,0,0,20,20H97.23l13.62,22.29a20,20,0,0,0,34.25.08L158.77,204H216a20,20,0,0,0,20-20V56A20,20,0,0,0,216,36Zm-4,144H156.53a20,20,0,0,0-17.1,9.63L128,208.33l-11.41-18.67A20.1,20.1,0,0,0,99.47,180H44V60H212ZM88,120a16,16,0,1,1,16,16A16,16,0,0,1,88,120Zm48,0a16,16,0,1,1,16,16A16,16,0,0,1,136,120Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const ChatCenteredDots: Icon = (props) => (
+const ChatCenteredDots: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+ChatCenteredDots.displayName = "ChatCenteredDots";
 
 export default ChatCenteredDots;

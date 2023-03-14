@@ -4,7 +4,7 @@ import path from "node:path";
 import chalk from "chalk";
 import { exec } from "node:child_process";
 
-import { ASSETS_PATH, COMPONENTS_PATH, INDEX_PATH } from "./index.js";
+import { ASSETS_PATH, COMPONENTS_PATH, INDEX_PATH, ICON_INDEX_PATH } from "./index.js";
 import { ALIASES } from "../core/bin/index.js";
 
 const icons = {};
@@ -33,6 +33,7 @@ function main() {
       loadWeights();
       generateComponents();
       generateExports();
+      generateIconExports();
     }
   );
 }
@@ -127,7 +128,7 @@ function generateComponents() {
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 ${Object.entries(icon)
@@ -144,9 +145,11 @@ ${Object.entries(icon)
 `;
 
     componentString += `
-const ${name}: Icon = (props) => (
+const ${name}: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+${name}.displayName = "${name}";
 
 export default ${name};
 `;
@@ -183,19 +186,38 @@ function generateExports() {
   let indexString = `\
 /* GENERATED FILE */
 export type { Icon, IconProps, IconWeight } from "./lib";
-export { IconContext, IconBase } from "./lib";
+export { IconContext, IconContextProvider, IconBase } from "./lib";
+export * from "./icons";
+
+`;
+  
+  try {
+    fs.writeFileSync(INDEX_PATH, indexString, {
+      flag: "w",
+    });
+    console.log(chalk.green("Export success"));
+  } catch (err) {
+    console.error(chalk.red("Export failed"));
+    console.group();
+    console.error(err);
+    console.groupEnd();
+  }
+}
+function generateIconExports() {
+  let iconIndexString = `\
+/* GENERATED FILE */
 
 `;
   for (let key in icons) {
     const name = pascalize(key);
-    indexString += `\
+    iconIndexString += `\
 export { default as ${name}${
       !!ALIASES[key] ? `, default as ${pascalize(ALIASES[key])}` : ""
-    } } from "./icons/${name}";
+    } } from "./${name}";
 `;
   }
   try {
-    fs.writeFileSync(INDEX_PATH, indexString, {
+    fs.writeFileSync(ICON_INDEX_PATH, iconIndexString, {
       flag: "w",
     });
     console.log(chalk.green("Export success"));

@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M232,84H216V64a20,20,0,0,0-20-20H52A20,20,0,0,0,32,64V84H16a12,12,0,0,0,0,24H32v20a20,20,0,0,0,20,20H196a20,20,0,0,0,20-20V108h12V151L130.5,178.8A20.09,20.09,0,0,0,116,198v34a12,12,0,0,0,24,0V201.05l97.5-27.85A20.09,20.09,0,0,0,252,154V104A20,20,0,0,0,232,84Zm-40,40H56V68H192Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const PaintRoller: Icon = (props) => (
+const PaintRoller: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+PaintRoller.displayName = "PaintRoller";
 
 export default PaintRoller;

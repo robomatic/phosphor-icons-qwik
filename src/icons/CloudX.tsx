@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M160,36A92.09,92.09,0,0,0,79,84.36,68,68,0,1,0,72,220h88a92,92,0,0,0,0-184Zm0,160H72a44,44,0,0,1-1.82-88A91.86,91.86,0,0,0,68,128a12,12,0,0,0,24,0,68,68,0,1,1,68,68Zm32.49-75.51L177,136l15.52,15.51a12,12,0,0,1-17,17L160,153l-15.51,15.52a12,12,0,1,1-17-17L143,136l-15.52-15.51a12,12,0,1,1,17-17L160,119l15.51-15.52a12,12,0,0,1,17,17Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const CloudX: Icon = (props) => (
+const CloudX: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+CloudX.displayName = "CloudX";
 
 export default CloudX;

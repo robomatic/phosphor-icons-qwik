@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M253.11,112.18,207.54,59.09A19.94,19.94,0,0,0,192.26,52H32A20,20,0,0,0,12,72V184a20,20,0,0,0,20,20H46.06a36,36,0,0,0,67.88,0h40.12a36,36,0,0,0,67.88,0H236a20,20,0,0,0,20-20V120A12.05,12.05,0,0,0,253.11,112.18ZM217.89,108H176V76h14.42ZM104,108V76h48v32ZM80,76v32H36V76Zm0,128a12,12,0,1,1,12-12A12,12,0,0,1,80,204Zm108,0a12,12,0,1,1,12-12A12,12,0,0,1,188,204Zm33.94-24a36,36,0,0,0-67.88,0H113.94a36,36,0,0,0-67.88,0H36V132H232v48Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const Van: Icon = (props) => (
+const Van: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+Van.displayName = "Van";
 
 export default Van;

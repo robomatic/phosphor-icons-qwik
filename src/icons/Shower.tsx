@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M68,236a16,16,0,1,1-16-16A16,16,0,0,1,68,236Zm16-48a16,16,0,1,0,16,16A16,16,0,0,0,84,188Zm-64,0a16,16,0,1,0,16,16A16,16,0,0,0,20,188Zm32,0a16,16,0,1,0-16-16A16,16,0,0,0,52,188ZM256,40a12,12,0,0,1-12,12H221L195.19,77.79,173.74,203.33a20,20,0,0,1-33.86,10.8l-98-98A20,20,0,0,1,52.72,82.25l125.5-21.44,26.95-26.95A19.86,19.86,0,0,1,219.31,28H244A12,12,0,0,1,256,40ZM169.32,86.68l-105,17.94,87.07,87.07Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const Shower: Icon = (props) => (
+const Shower: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+Shower.displayName = "Shower";
 
 export default Shower;

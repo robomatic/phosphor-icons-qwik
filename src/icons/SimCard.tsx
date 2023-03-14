@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M216.49,79.51l-56-56A12,12,0,0,0,152,20H56A20,20,0,0,0,36,40V216a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V88A12,12,0,0,0,216.49,79.51ZM196,212H60V44h87l49,49ZM88,112a12,12,0,0,0-12,12v64a12,12,0,0,0,12,12h80a12,12,0,0,0,12-12V124a12,12,0,0,0-12-12Zm12,24h16v40H100Zm56,40H140V136h16Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const SimCard: Icon = (props) => (
+const SimCard: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+SimCard.displayName = "SimCard";
 
 export default SimCard;

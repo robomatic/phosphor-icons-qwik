@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M208,28H48A20,20,0,0,0,28,48V208a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V48A20,20,0,0,0,208,28Zm-4,176H52V52H204ZM76,128a12,12,0,0,1,12-12h80a12,12,0,0,1,0,24H88A12,12,0,0,1,76,128Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const MinusSquare: Icon = (props) => (
+const MinusSquare: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+MinusSquare.displayName = "MinusSquare";
 
 export default MinusSquare;

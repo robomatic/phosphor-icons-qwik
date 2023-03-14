@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M140,128v40a12,12,0,0,1-24,0V128a12,12,0,0,1,24,0ZM243.82,98.64,230,202.64A20.06,20.06,0,0,1,210.13,220H45.87A20.07,20.07,0,0,1,26,202.65l-13.86-104A20,20,0,0,1,32,76H66.55L119,16.1a12,12,0,0,1,18.06,0L189.45,76H224a20,20,0,0,1,19.81,22.64ZM98.45,76h59.11L128,42.22Zm121,24H36.57l12.8,96H206.63Zm-51.37,26.81-4,40a12,12,0,0,0,10.75,13.13c.4,0,.81.06,1.21.06a12,12,0,0,0,11.92-10.81l4-40a12,12,0,1,0-23.88-2.38Zm-80.12,0a12,12,0,0,0-23.88,2.38l4,40A12,12,0,0,0,80,180c.39,0,.8,0,1.2-.06a12,12,0,0,0,10.75-13.13Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const Basket: Icon = (props) => (
+const Basket: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+Basket.displayName = "Basket";
 
 export default Basket;

@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M144,204a16,16,0,1,1-16-16A16,16,0,0,1,144,204Zm63.45-84.36a128,128,0,0,0-158.9,0,12,12,0,0,0,14.9,18.81,104,104,0,0,1,129.1,0,12,12,0,0,0,14.9-18.81ZM175.07,155.3a80.05,80.05,0,0,0-94.14,0,12,12,0,0,0,14.14,19.4,56,56,0,0,1,65.86,0,12,12,0,1,0,14.14-19.4Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const WifiMedium: Icon = (props) => (
+const WifiMedium: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+WifiMedium.displayName = "WifiMedium";
 
 export default WifiMedium;

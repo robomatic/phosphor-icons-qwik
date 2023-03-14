@@ -1,7 +1,7 @@
 /* GENERATED FILE */
     
 import { IconBase } from "../lib";
-import type { Icon } from "../lib";
+import type { Icon, IconProps } from "../lib";
 import { $ } from '@builder.io/qwik';
 
 export const Bold = $(() => <><path d="M172.29,68.9A84,84,0,0,0,12,104v66a18,18,0,0,0,18,18H84.1A84.18,84.18,0,0,0,160,236h66a18,18,0,0,0,18-18V152A84,84,0,0,0,172.29,68.9ZM36,104a60,60,0,1,1,60,60H36ZM220,212H160a60.14,60.14,0,0,1-49-25.37,83.93,83.93,0,0,0,68.55-91.37A60,60,0,0,1,220,152Z"/></>)
@@ -20,8 +20,10 @@ const weights = {
   thin: Thin
 }
 
-const ChatsTeardrop: Icon = (props) => (
+const ChatsTeardrop: Icon<IconProps> = (props) => (
   <IconBase {...props} weights={weights} />
 );
+
+ChatsTeardrop.displayName = "ChatsTeardrop";
 
 export default ChatsTeardrop;
